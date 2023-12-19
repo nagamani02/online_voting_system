@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import com.SpringBootApplication.repo.VotingRepo;
+import com.SpringBootApplication.service.VotingService;
 
 @RestController
 @Validated
@@ -27,18 +28,18 @@ public class VotingResource {
 	DateValidatorUsingLocalDate dateValidatorUsingLocalDate;
 	@Autowired
 	VotingRepo votingrepo;
+	@Autowired
+	VotingService votingService;
 
 	@PostMapping("voters")
 	public ResponseEntity<?> addVoters(@Valid @RequestBody VoterDto voterDto) {
 		if (!dateValidatorUsingLocalDate.isValid(voterDto.getDateOfBirth())) {
 			return new ResponseEntity<>("Invalid date of birth", HttpStatus.BAD_REQUEST);
 		}
-		// convert DTO to entity
-		VoterEntity postRequest = modelMapper.map(voterDto, VoterEntity.class);
-		VoterEntity post=votingrepo.save(postRequest);
-		// entity to DTO
-		VoterDto postResponse = modelMapper.map(post, VoterDto.class);
-		return new ResponseEntity<>(postResponse, HttpStatus.CREATED);
+		
+//		VoterDto postResponse=
+		votingService.addVoter(voterDto);
+		return new ResponseEntity<>(null, HttpStatus.CREATED);
 	}
 
 	@ResponseStatus(HttpStatus.BAD_REQUEST)

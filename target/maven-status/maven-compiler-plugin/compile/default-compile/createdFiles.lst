@@ -5,3 +5,4 @@ com/SpringBootApplication/resource/VoterEntity.class
 com/SpringBootApplication/repo/VotingRepo.class
 com/SpringBootApplication/springapplication.class
 com/SpringBootApplication/resource/DateValidator.class
+com/SpringBootApplication/service/VotingService.class
