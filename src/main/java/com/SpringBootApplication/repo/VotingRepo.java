@@ -4,6 +4,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.SpringBootApplication.resource.VoterDto;
 import com.SpringBootApplication.resource.VoterEntity;
 
-public interface VotingRepo extends JpaRepository<VoterEntity, Integer> {
-
-}
+public interface VotingRepo extends JpaRepository<VoterEntity, Integer> {}

@@ -4,76 +4,88 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-
-
-
 public class VoterDto {
-	@NotBlank(message = "Name is mandatory")
-	private String firstname;
-	@NotNull(message = "Name cannot be null")
-	private String middlename;
-	@NotBlank(message = "LastName is mandatory")
-	private String lastname;
-	@NotBlank(message = "Date of birth is mandatory")
-	private String dateOfBirth;
-	@Email(message = "Email is not valid", regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
-	@NotBlank(message = "Email cannot be empty")
-	private String email;
-	@NotBlank(message = "Password cannot be empty")
-	private String password;
+  @NotBlank(message = "Name is mandatory")
+  private String firstname;
 
-	public String getFirstname() {
-		return firstname;
-	}
+  @NotNull(message = "Name cannot be null")
+  private String middlename;
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
+  @NotBlank(message = "LastName is mandatory")
+  private String lastname;
 
-	public String getMiddlename() {
-		return middlename;
-	}
+  @NotBlank(message = "Date of birth is mandatory")
+  private String dateOfBirth;
 
-	public void setMiddlename(String middlename) {
-		this.middlename = middlename;
-	}
+  @Email(message = "Email is not valid", regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
+  @NotBlank(message = "Email cannot be empty")
+  private String email;
 
-	public String getLastname() {
-		return lastname;
-	}
+  @NotBlank(message = "Password cannot be empty")
+  private String password;
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
+  public String getFirstname() {
+    return firstname;
+  }
 
-	public String getDateOfBirth() {
-		return dateOfBirth;
-	}
+  public void setFirstname(String firstname) {
+    this.firstname = firstname;
+  }
 
-	public void setDateOfBirth(String dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
+  public String getMiddlename() {
+    return middlename;
+  }
 
-	public String getEmail() {
-		return email;
-	}
+  public void setMiddlename(String middlename) {
+    this.middlename = middlename;
+  }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+  public String getLastname() {
+    return lastname;
+  }
 
-	public String getPassword() {
-		return password;
-	}
+  public void setLastname(String lastname) {
+    this.lastname = lastname;
+  }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+  public String getDateOfBirth() {
+    return dateOfBirth;
+  }
 
-	@Override
-	public String toString() {
-		return "VoterModel [firstname=" + firstname + ", middlename=" + middlename + ", lastname=" + lastname
-				+ ", dateOfBirth=" + dateOfBirth + ", email=" + email + ", password=" + password + "]";
-	}
+  public void setDateOfBirth(String dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+  }
 
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  @Override
+  public String toString() {
+    return "VoterModel [firstname="
+        + firstname
+        + ", middlename="
+        + middlename
+        + ", lastname="
+        + lastname
+        + ", dateOfBirth="
+        + dateOfBirth
+        + ", email="
+        + email
+        + ", password="
+        + password
+        + "]";
+  }
 }

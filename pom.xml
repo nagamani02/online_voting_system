@@ -40,6 +40,53 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-maven-plugin</artifactId>
     </plugin>
+<plugin>
+    <groupId>com.theoryinpractise</groupId>
+        <artifactId>googleformatter-maven-plugin</artifactId>
+        <version>1.7.3</version>
+    <executions>
+        <execution>
+            <id>reformat-sources</id>
+            <configuration>
+                <includeStale>false</includeStale>
+                <style>GOOGLE</style>
+                <filterModified>false</filterModified>
+                <skip>false</skip>
+                <fixImports>false</fixImports>
+                <maxLineLength>100</maxLineLength>
+            </configuration>
+            <goals>
+                <goal>format</goal>
+            </goals>
+            <phase>process-sources</phase>
+        </execution>
+    </executions>
+</plugin>
+       <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>3.3.1</version>
+            <dependencies>
+                <dependency>
+                    <groupId>com.puppycrawl.tools</groupId>
+                    <artifactId>checkstyle</artifactId>
+                    <version>10.9.0</version> <!-- Adjust version as needed -->
+                </dependency>
+            </dependencies>
+            <executions>
+                <execution>
+                    <id>checkstyle</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>check</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <configLocation>https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml</configLocation>
+            </configuration>
+        </plugin>
+
   </plugins>
 </build>
 </project>

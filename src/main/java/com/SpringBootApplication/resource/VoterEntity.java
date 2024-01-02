@@ -6,83 +6,90 @@ import javax.persistence.Id;
 
 @Entity
 public class VoterEntity {
-	@Id
-	@GeneratedValue
-	private int voterid;
+  @Id @GeneratedValue private int voterid;
 
-	private String firstname;
+  private String firstname;
 
-	private String middlename;
+  private String middlename;
 
-	private String lastname;
+  private String lastname;
 
-	private String dateOfBirth;
+  private String dateOfBirth;
 
-	private String email;
+  private String email;
 
-	private String password;
-	
+  private String password;
 
-	public int getVoterid() {
-		return voterid;
-	}
+  public int getVoterid() {
+    return voterid;
+  }
 
-	public void setVoterid(int voterid) {
-		this.voterid = voterid;
-	}
+  public void setVoterid(int voterid) {
+    this.voterid = voterid;
+  }
 
-	public String getFirstname() {
-		return firstname;
-	}
+  public String getFirstname() {
+    return firstname;
+  }
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
+  public void setFirstname(String firstname) {
+    this.firstname = firstname;
+  }
 
-	public String getMiddlename() {
-		return middlename;
-	}
+  public String getMiddlename() {
+    return middlename;
+  }
 
-	public void setMiddlename(String middlename) {
-		this.middlename = middlename;
-	}
+  public void setMiddlename(String middlename) {
+    this.middlename = middlename;
+  }
 
-	public String getLastname() {
-		return lastname;
-	}
+  public String getLastname() {
+    return lastname;
+  }
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
+  public void setLastname(String lastname) {
+    this.lastname = lastname;
+  }
 
-	public String getDateOfBirth() {
-		return dateOfBirth;
-	}
+  public String getDateOfBirth() {
+    return dateOfBirth;
+  }
 
-	public void setDateOfBirth(String dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
+  public void setDateOfBirth(String dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+  }
 
-	public String getEmail() {
-		return email;
-	}
+  public String getEmail() {
+    return email;
+  }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-	public String getPassword() {
-		return password;
-	}
+  public String getPassword() {
+    return password;
+  }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-	@Override
-	public String toString() {
-		return "VoterModel [firstname=" + firstname + ", middlename=" + middlename + ", lastname=" + lastname
-				+ ", dateOfBirth=" + dateOfBirth + ", email=" + email + ", password=" + password + "]";
-	}
-
+  @Override
+  public String toString() {
+    return "VoterModel [firstname="
+        + firstname
+        + ", middlename="
+        + middlename
+        + ", lastname="
+        + lastname
+        + ", dateOfBirth="
+        + dateOfBirth
+        + ", email="
+        + email
+        + ", password="
+        + password
+        + "]";
+  }
 }
