@@ -11,3 +11,8 @@
 /target/
 /out/
 .settings/
+
+# Ignore Eclipse files
+.classpath
+.project
+
