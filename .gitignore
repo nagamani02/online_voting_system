@@ -11,6 +11,7 @@
 /target/
 /out/
 .settings/
+.DS_store
 
 # Ignore Eclipse files
 .classpath
