@@ -7,7 +7,7 @@
     <version>2.1.0.RELEASE</version>
   </parent>
   <groupId>com.springboot</groupId>
-  <artifactId>OnlineVotingSystem</artifactId>
+  <artifactId>online_voting_service</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <dependencies>
