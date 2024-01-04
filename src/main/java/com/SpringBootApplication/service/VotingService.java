@@ -20,10 +20,6 @@ public class VotingService {
     String encryptedPwd = bcrypt.encode(postRequest.getPassword());
     System.out.println(encryptedPwd);
     postRequest.setPassword(encryptedPwd);
-    VoterEntity post = votingRepo.save(postRequest);
-    //    // entity to DTO
-    //      VoterDto postResponse = modelMapper.map(post, VoterDto.class);
-    //       return postResponse;
-
+    votingRepo.save(postRequest);
   }
 }

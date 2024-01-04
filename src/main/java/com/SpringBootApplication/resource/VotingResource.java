@@ -3,8 +3,6 @@ package com.SpringBootApplication.resource;
 import java.util.HashMap;
 import java.util.Map;
 import javax.validation.Valid;
-
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +20,6 @@ import com.SpringBootApplication.service.VotingService;
 @RestController
 @Validated
 public class VotingResource {
-  @Autowired private ModelMapper modelMapper;
   @Autowired DateValidatorUsingLocalDate dateValidatorUsingLocalDate;
   @Autowired VotingRepo votingrepo;
   @Autowired VotingService votingService;
@@ -33,7 +30,6 @@ public class VotingResource {
       return new ResponseEntity<>("Invalid date of birth", HttpStatus.BAD_REQUEST);
     }
 
-    //		VoterDto postResponse=
     votingService.addVoter(voterDto);
     return new ResponseEntity<>(null, HttpStatus.CREATED);
   }

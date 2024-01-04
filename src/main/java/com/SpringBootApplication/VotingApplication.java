@@ -4,11 +4,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import com.SpringBootApplication.resource.VotingResource;
 
 @SpringBootApplication
-public class springapplication {
+public class VotingApplication {
 
   @Bean
   public ModelMapper modelMapper() {
@@ -16,6 +14,6 @@ public class springapplication {
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(springapplication.class, args);
+    SpringApplication.run(VotingApplication.class, args);
   }
 }

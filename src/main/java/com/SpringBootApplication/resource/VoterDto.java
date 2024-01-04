@@ -2,19 +2,17 @@ package com.SpringBootApplication.resource;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 public class VoterDto {
-  @NotBlank(message = "Name is mandatory")
+  @NotBlank(message = "First Name is mandatory")
   private String firstname;
 
-  @NotNull(message = "Name cannot be null")
   private String middlename;
 
-  @NotBlank(message = "LastName is mandatory")
+  @NotBlank(message = "Last Name is mandatory")
   private String lastname;
 
-  @NotBlank(message = "Date of birth is mandatory")
+  @NotBlank(message = "Date of Birth is mandatory")
   private String dateOfBirth;
 
   @Email(message = "Email is not valid", regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
