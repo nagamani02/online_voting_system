@@ -11,25 +11,25 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <dependencies>
-
-    <dependency>
-      <groupId>org.modelmapper</groupId>
-      <artifactId>modelmapper</artifactId>
-      <version>3.0.0</version>
-    </dependency>
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.28</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
+
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <groupId>org.modelmapper</groupId>
+      <artifactId>modelmapper</artifactId>
+      <version>3.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
@@ -40,10 +40,14 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
         <groupId>com.github.ekryd.sortpom</groupId>
         <artifactId>sortpom-maven-plugin</artifactId>
         <version>3.0.0</version>
-        <configuration>
+<configuration>
           <predefinedSortOrder>custom_1</predefinedSortOrder>
           <lineSeparator>\n</lineSeparator>
           <sortProperties>true</sortProperties>
@@ -105,10 +109,6 @@
             <phase>verify</phase>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
 
     </plugins>
