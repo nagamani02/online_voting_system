@@ -16,3 +16,6 @@
 # Ignore Eclipse files
 .classpath
 .project
+
+# Ignore pom.xml.backup file
+pom.xml.bak 
