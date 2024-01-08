@@ -6,7 +6,9 @@ import javax.persistence.Id;
 
 @Entity
 public class VoterEntity {
-  @Id @GeneratedValue private int voterid;
+  @Id
+  @GeneratedValue
+  private int voterid;
 
   private String firstname;
 
@@ -78,18 +80,8 @@ public class VoterEntity {
 
   @Override
   public String toString() {
-    return "VoterModel [firstname="
-        + firstname
-        + ", middlename="
-        + middlename
-        + ", lastname="
-        + lastname
-        + ", dateOfBirth="
-        + dateOfBirth
-        + ", email="
-        + email
-        + ", password="
-        + password
+    return "VoterModel [firstname=" + firstname + ", middlename=" + middlename + ", lastname="
+        + lastname + ", dateOfBirth=" + dateOfBirth + ", email=" + email + ", password=" + password
         + "]";
   }
 }

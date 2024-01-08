@@ -11,7 +11,6 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <dependencies>
-
     <dependency>
       <groupId>org.modelmapper</groupId>
       <artifactId>modelmapper</artifactId>
@@ -60,52 +59,31 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>com.theoryinpractise</groupId>
-        <artifactId>googleformatter-maven-plugin</artifactId>
-        <version>1.7.3</version>
+        <groupId>net.revelc.code.formatter</groupId>
+        <artifactId>formatter-maven-plugin</artifactId>
+        <version>2.23.0</version>
+        <configuration>
+          <!--Using the provided code formatting style to format the code -->
+          <configFile>src/main/resources/formatter.xml</configFile>
+        </configuration>
         <executions>
           <execution>
-            <id>reformat-sources</id>
+            <id>format</id>
             <goals>
               <goal>format</goal>
             </goals>
-            <phase>process-sources</phase>
-            <configuration>
-              <includeStale>false</includeStale>
-              <style>GOOGLE</style>
-              <filterModified>false</filterModified>
-              <skip>false</skip>
-              <fixImports>false</fixImports>
-              <maxLineLength>100</maxLineLength>
-            </configuration>
+            <phase>process-resources</phase>
           </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.3.1</version>
-        <configuration>
-          <configLocation>https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml</configLocation>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>com.puppycrawl.tools</groupId>
-            <artifactId>checkstyle</artifactId>
-            <version>10.9.0</version>
-            <!-- Adjust version as needed -->
-          </dependency>
-        </dependencies>
-        <executions>
           <execution>
-            <id>checkstyle</id>
+            <id>validate</id>
             <goals>
-              <goal>check</goal>
+              <goal>validate</goal>
             </goals>
-            <phase>verify</phase>
+            <phase>compile</phase>
           </execution>
         </executions>
       </plugin>
+
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>

@@ -10,8 +10,10 @@ import com.SpringBootApplication.resource.VoterEntity;
 
 @Service
 public class VotingService {
-  @Autowired private VotingRepo votingRepo;
-  @Autowired private ModelMapper modelMapper;
+  @Autowired
+  private VotingRepo votingRepo;
+  @Autowired
+  private ModelMapper modelMapper;
 
   public void addVoter(VoterDto voterDto) {
     // convert DTO to entity
