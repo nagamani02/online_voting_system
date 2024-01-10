@@ -26,7 +26,7 @@ public class VoterEntity {
     return voterid;
   }
 
-  public void setVoterid(int voterid) {
+  public void setVoterid(final int voterid) {
     this.voterid = voterid;
   }
 
@@ -34,7 +34,7 @@ public class VoterEntity {
     return firstname;
   }
 
-  public void setFirstname(String firstname) {
+  public void setFirstname(final String firstname) {
     this.firstname = firstname;
   }
 
@@ -42,7 +42,7 @@ public class VoterEntity {
     return middlename;
   }
 
-  public void setMiddlename(String middlename) {
+  public void setMiddlename(final String middlename) {
     this.middlename = middlename;
   }
 
@@ -50,7 +50,7 @@ public class VoterEntity {
     return lastname;
   }
 
-  public void setLastname(String lastname) {
+  public void setLastname(final String lastname) {
     this.lastname = lastname;
   }
 
@@ -58,7 +58,7 @@ public class VoterEntity {
     return dateOfBirth;
   }
 
-  public void setDateOfBirth(String dateOfBirth) {
+  public void setDateOfBirth(final String dateOfBirth) {
     this.dateOfBirth = dateOfBirth;
   }
 
@@ -66,7 +66,7 @@ public class VoterEntity {
     return email;
   }
 
-  public void setEmail(String email) {
+  public void setEmail(final String email) {
     this.email = email;
   }
 
@@ -74,14 +74,14 @@ public class VoterEntity {
     return password;
   }
 
-  public void setPassword(String password) {
+  public void setPassword(final String password) {
     this.password = password;
   }
 
   @Override
   public String toString() {
-    return "VoterModel [firstname=" + firstname + ", middlename=" + middlename + ", lastname="
-        + lastname + ", dateOfBirth=" + dateOfBirth + ", email=" + email + ", password=" + password
-        + "]";
+    return "VoterModel [firstname=" + firstname + ", middlename=" + middlename
+      + "lastname=" + lastname + ", dateOfBirth=" + dateOfBirth + ", "
+        + "email=" + email + ", password=" + password + "]";
   }
 }

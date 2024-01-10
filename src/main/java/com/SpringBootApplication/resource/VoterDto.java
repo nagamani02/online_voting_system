@@ -15,7 +15,8 @@ public class VoterDto {
   @NotBlank(message = "Date of Birth is mandatory")
   private String dateOfBirth;
 
-  @Email(message = "Email is not valid", regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
+  @Email(message = "Email is not valid",
+      regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
   @NotBlank(message = "Email cannot be empty")
   private String email;
 
@@ -26,7 +27,7 @@ public class VoterDto {
     return firstname;
   }
 
-  public void setFirstname(String firstname) {
+  public void setFirstname(final String firstname) {
     this.firstname = firstname;
   }
 
@@ -34,7 +35,7 @@ public class VoterDto {
     return middlename;
   }
 
-  public void setMiddlename(String middlename) {
+  public void setMiddlename(final String middlename) {
     this.middlename = middlename;
   }
 
@@ -42,7 +43,7 @@ public class VoterDto {
     return lastname;
   }
 
-  public void setLastname(String lastname) {
+  public void setLastname(final String lastname) {
     this.lastname = lastname;
   }
 
@@ -50,7 +51,7 @@ public class VoterDto {
     return dateOfBirth;
   }
 
-  public void setDateOfBirth(String dateOfBirth) {
+  public void setDateOfBirth(final String dateOfBirth) {
     this.dateOfBirth = dateOfBirth;
   }
 
@@ -58,7 +59,7 @@ public class VoterDto {
     return email;
   }
 
-  public void setEmail(String email) {
+  public void setEmail(final String email) {
     this.email = email;
   }
 
@@ -66,14 +67,15 @@ public class VoterDto {
     return password;
   }
 
-  public void setPassword(String password) {
+  public void setPassword(final String password) {
     this.password = password;
   }
 
   @Override
   public String toString() {
-    return "VoterModel [firstname=" + firstname + ", middlename=" + middlename + ", lastname="
-        + lastname + ", dateOfBirth=" + dateOfBirth + ", email=" + email + ", password=" + password
-        + "]";
+    return "VoterModel [firstname=" + firstname + ", "
+      + "middlename=" + middlename + ", lastname="
+      + lastname + ", dateOfBirth=" + dateOfBirth + ", "
+      + "email=" + email + ", password=" + password + "]";
   }
 }

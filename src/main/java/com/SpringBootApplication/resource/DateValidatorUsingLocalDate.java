@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DateValidatorUsingLocalDate implements DateValidator {
   @Override
-  public boolean isValid(String dateOfBirth) {
+  public boolean isValid(final String dateOfBirth) {
     try {
       LocalDate.parse(dateOfBirth, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     } catch (DateTimeParseException e) {
