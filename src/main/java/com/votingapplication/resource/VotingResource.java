@@ -1,5 +1,6 @@
 package com.votingapplication.resource;
 
+import com.votingapplication.dto.VoterDto;
 import com.votingapplication.service.VotingService;
 import java.util.HashMap;
 import java.util.Map;

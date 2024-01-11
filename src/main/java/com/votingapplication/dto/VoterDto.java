@@ -1,4 +1,4 @@
-package com.votingapplication.resource;
+package com.votingapplication.dto;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

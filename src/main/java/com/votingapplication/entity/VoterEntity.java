@@ -1,4 +1,4 @@
-package com.votingapplication.resource;
+package com.votingapplication.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
