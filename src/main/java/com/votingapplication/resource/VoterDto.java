@@ -15,7 +15,8 @@ public class VoterDto {
   @NotBlank(message = "Date of Birth is mandatory")
   private String dateOfBirth;
 
-  @Email(message = "Email is not valid", regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
+  @Email(message = "Email is not valid",
+      regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
   @NotBlank(message = "Email cannot be empty")
   private String email;
 
@@ -72,8 +73,9 @@ public class VoterDto {
 
   @Override
   public String toString() {
-    return "VoterModel [firstname=" + firstname + ", " + "middlename=" + middlename + ", lastname="
-        + lastname + ", dateOfBirth=" + dateOfBirth + ", " + "email=" + email + ", password="
-        + password + "]";
+    return "VoterModel [firstname=" + firstname + ", "
+      + "middlename=" + middlename + ", lastname="
+      + lastname + ", dateOfBirth=" + dateOfBirth + ", "
+      + "email=" + email + ", password=" + password + "]";
   }
 }
