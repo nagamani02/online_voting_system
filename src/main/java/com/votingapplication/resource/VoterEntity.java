@@ -1,4 +1,4 @@
-package com.SpringBootApplication.resource;
+package com.votingapplication.resource;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -80,8 +80,8 @@ public class VoterEntity {
 
   @Override
   public String toString() {
-    return "VoterModel [firstname=" + firstname + ", middlename=" + middlename
-      + "lastname=" + lastname + ", dateOfBirth=" + dateOfBirth + ", "
-        + "email=" + email + ", password=" + password + "]";
+    return "VoterModel [firstname=" + firstname + ", middlename=" + middlename + "lastname="
+        + lastname + ", dateOfBirth=" + dateOfBirth + ", " + "email=" + email + ", password="
+        + password + "]";
   }
 }

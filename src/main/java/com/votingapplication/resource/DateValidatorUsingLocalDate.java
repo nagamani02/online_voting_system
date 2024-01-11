@@ -1,4 +1,4 @@
-package com.SpringBootApplication.resource;
+package com.votingapplication.resource;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

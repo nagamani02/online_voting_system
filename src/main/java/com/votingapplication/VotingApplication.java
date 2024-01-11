@@ -1,4 +1,4 @@
-package com.SpringBootApplication;
+package com.votingapplication;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;

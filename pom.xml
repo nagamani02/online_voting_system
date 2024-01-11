@@ -6,7 +6,7 @@
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.1.0.RELEASE</version>
   </parent>
-  <groupId>com.springboot</groupId>
+  <groupId>com.mani</groupId>
   <artifactId>online_voting_service</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 

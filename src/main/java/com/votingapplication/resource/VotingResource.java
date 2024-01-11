@@ -1,6 +1,6 @@
-package com.SpringBootApplication.resource;
+package com.votingapplication.resource;
 
-import com.SpringBootApplication.service.VotingService;
+import com.votingapplication.service.VotingService;
 import java.util.HashMap;
 import java.util.Map;
 import javax.validation.Valid;
@@ -25,11 +25,9 @@ public class VotingResource {
   private VotingService votingService;
 
   @PostMapping("voters")
-  public ResponseEntity<?> addVoters(
-      final @Valid @RequestBody VoterDto voterDto) {
+  public ResponseEntity<?> addVoters(final @Valid @RequestBody VoterDto voterDto) {
     if (!dateValidatorUsingLocalDate.isValid(voterDto.getDateOfBirth())) {
-      return new ResponseEntity<>(
-     "Invalid date of birth", HttpStatus.BAD_REQUEST);
+      return new ResponseEntity<>("Invalid date of birth", HttpStatus.BAD_REQUEST);
     }
     votingService.addVoter(voterDto);
     return new ResponseEntity<>(null, HttpStatus.CREATED);
@@ -37,15 +35,13 @@ public class VotingResource {
 
   @ResponseStatus(HttpStatus.BAD_REQUEST)
   @ExceptionHandler(MethodArgumentNotValidException.class)
-  public Map<String, String> handleValidationExceptions(
-      final MethodArgumentNotValidException ex) {
+  public Map<String, String> handleValidationExceptions(final MethodArgumentNotValidException ex) {
     Map<String, String> errors = new HashMap<String, String>();
-    ex.getBindingResult()
-        .getAllErrors().forEach((error) -> {
-          String fieldName = ((FieldError) error).getField();
-          String errorMessage = error.getDefaultMessage();
-          errors.put(fieldName, errorMessage);
-        });
+    ex.getBindingResult().getAllErrors().forEach((error) -> {
+      String fieldName = ((FieldError) error).getField();
+      String errorMessage = error.getDefaultMessage();
+      errors.put(fieldName, errorMessage);
+    });
     return errors;
   }
 }

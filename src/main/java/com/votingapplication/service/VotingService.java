@@ -1,8 +1,8 @@
-package com.SpringBootApplication.service;
+package com.votingapplication.service;
 
-import com.SpringBootApplication.repo.VotingRepo;
-import com.SpringBootApplication.resource.VoterDto;
-import com.SpringBootApplication.resource.VoterEntity;
+import com.votingapplication.repo.VotingRepo;
+import com.votingapplication.resource.VoterDto;
+import com.votingapplication.resource.VoterEntity;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

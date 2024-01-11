@@ -1,6 +1,6 @@
-package com.SpringBootApplication.repo;
+package com.votingapplication.repo;
 
-import com.SpringBootApplication.resource.VoterEntity;
+import com.votingapplication.resource.VoterEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface VotingRepo extends JpaRepository<VoterEntity, Integer> {
