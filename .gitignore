@@ -1,0 +1,21 @@
+# Ignore compiled Java classes
+*.class
+
+# Ignore temporary files
+*.tmp
+
+# Ignore log files
+*.log
+
+# Ignore build output directories
+/target/
+/out/
+.settings/
+.DS_store
+
+# Ignore Eclipse files
+.classpath
+.project
+
+# Ignore pom.xml.backup file
+pom.xml.bak 
